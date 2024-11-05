@@ -17,16 +17,12 @@ int main()
         if (sieve[index]) continue;
         
         for (int multiple = index * 2; multiple <= upper_bound; multiple += index)
-        {
             sieve[multiple] = 1;
-        }
     }
     
     // primes are indicated by 0's, composites by 1's
     for (int index = lower_bound; index <= upper_bound; index++)
-    {
         printf("%d ", sieve[index]);
-    }
     
     return 0;
 }
