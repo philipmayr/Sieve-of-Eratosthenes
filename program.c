@@ -20,9 +20,9 @@ int main()
             sieve[multiple] = 1;
     }
     
-    // primes are indicated by 0's, composites by 1's
+    // primes are indicated by O's, composites by X's
     for (int index = lower_bound; index <= upper_bound; index++)
-        printf("%d ", sieve[index]);
-    
+        if (sieve[index] == 0) printf("%c ", 'O'); else printf("%c ", 'X');
+        
     return 0;
 }
